@@ -1,5 +1,5 @@
 FROM buildpacksio/pack:latest
 
-COPY entrypoint.sh /entrypoint.sh
+COPY entrypoint.shx /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
