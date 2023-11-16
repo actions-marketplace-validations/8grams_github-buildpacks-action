@@ -1,0 +1,16 @@
+name: 8grams Buildpacks for GitHub Action
+description: Buildpacks transform your application source code into images that can run on any cloud
+author: 8grams
+branding:
+  icon: upload-cloud
+  color: blue
+inputs:
+  app_name:
+    description: App Name
+    required: true
+  tag_name:
+    description: Tag Name
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
