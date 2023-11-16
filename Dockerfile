@@ -1,5 +1,9 @@
-FROM buildpacksio/pack:latest
+FROM alpine:latest
 
-COPY entrypoint.shx /entrypoint.sh
+RUN apk add curl
+
+RUN (curl -sSL "https://github.com/buildpacks/pack/releases/download/v0.32.1/pack-v0.32.1-linux.tgz" | tar -C /usr/local/bin/ --no-same-owner -xzv pack)
+
+COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
